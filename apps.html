@@ -36,27 +36,16 @@
           <a href="index.html" style="text-decoration:none;background: #fff;border-radius: 5pc;color:#000;">Iniciar</a>
       </batata>
   </div>
-  <div class="container">
-    <div class="clock"></div>
-  </div>
+  <p id="datetime"></p>
 
-  <script>
-    const getHours = () => {
-const clock = document.getElementsByClassName('clock')[0]
-const date = new Date()
-const hours = date.getHours()
-const minutes = date.getMinutes()
-const seconds = date.getSeconds()
-const hour = hours < 10 ? `0${hours}` : hours
-const minute = minutes < 10 ? `0${minutes}` : minutes
-const second = seconds < 10 ? `0${seconds}` : seconds
-clock.innerHTML = `${hour}:${minute}:${second}`
-}
+<script>
+  // Get current date and time
+  var now = new Date();
+  var datetime = now.toLocaleString();
 
-setInterval(() => {
-getHours()
-}, 1000)
-  </script>
+  // Insert date and time into HTML
+  document.getElementById("datetime").innerHTML = datetime;
+</script>
     <p></p>
     <div class="apps">
         <a href="todo.html">        <img src="todo.png" alt="todo"><p></p>To-Do</a>
@@ -69,5 +58,8 @@ getHours()
         <a href="mktv.html">        <img src="+KTV/+KTV (1).png" alt="todo"><p></p>+KTV</a>
         <p></p>
         <a href="goodlacar.html">        <img src="GoodLaçar.png" alt="todo"><p></p>GoodLaçar</a>
+        <p></p>
+        <a href="topicos.html">        <img src="https://kiti.dev/kiti.png" alt="todo"><p></p>Tópicos</a>
+        "></a>
   </body>
 </html>
